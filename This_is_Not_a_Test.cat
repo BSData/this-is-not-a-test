@@ -5615,7 +5615,7 @@
             <characteristic name="Wounds" typeId="757b-36ba-5f57-60eb">2</characteristic>
             <characteristic name="Move" typeId="fd71-598a-c83d-d09c">5</characteristic>
             <characteristic name="Melee" typeId="ad0e-179a-f54c-2641">5</characteristic>
-            <characteristic name="Ranged" typeId="1978-8261-8449-edbe">5</characteristic>
+            <characteristic name="Ranged" typeId="1978-8261-8449-edbe">6</characteristic>
             <characteristic name="Strength" typeId="fe7d-78b8-51a6-e356">6</characteristic>
             <characteristic name="Mettle" typeId="4b87-a423-c470-af39">7</characteristic>
           </characteristics>
@@ -5837,13 +5837,12 @@
     <selectionEntry id="8f99-8e09-f44c-f45f" name="Mysterious Stranger" hidden="false" collective="false" import="true" type="model">
       <modifiers>
         <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a0a4-7025-8c7a-49cc" type="lessThan"/>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="56e1-047a-a8aa-c6a3" type="lessThan"/>
+          </conditions>
           <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="03dd-c97e-b78f-0cac" type="lessThan"/>
-                <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="56e1-047a-a8aa-c6a3" type="lessThan"/>
-              </conditions>
-            </conditionGroup>
+            <conditionGroup type="and"/>
           </conditionGroups>
         </modifier>
       </modifiers>
@@ -6065,7 +6064,7 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3aca-0bf7-dbb0-65b2" type="max"/>
           </constraints>
           <entryLinks>
-            <entryLink id="a2d8-f05d-e15b-bab9" hidden="false" collective="false" import="true" targetId="4092-1772-84c9-1905" type="selectionEntry"/>
+            <entryLink id="a2d8-f05d-e15b-bab9" name="Up-Armed (Militia Gunsmith)" hidden="false" collective="false" import="true" targetId="06fb-b04e-5cc7-b15e" type="selectionEntry"/>
           </entryLinks>
           <costs>
             <cost name="pts" typeId="points" value="0.0"/>
@@ -7914,6 +7913,14 @@
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry id="06fb-b04e-5cc7-b15e" name="Up-Armed (Militia Gunsmith)" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ad0b-662a-2b76-0dce" type="max"/>
+      </constraints>
+      <entryLinks>
+        <entryLink id="e87f-ba76-8d50-463e" hidden="false" collective="false" import="true" targetId="da6a-ab5f-84b6-5731" type="selectionEntry"/>
+      </entryLinks>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
